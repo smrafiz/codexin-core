@@ -1,0 +1,526 @@
+# Copyright (C) 2018 Codexin Core Plugin
+# This file is distributed under the same license as the Codexin Core Plugin package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Codexin Core Plugin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language-Team: Codexin <support@codexin.com>\n"
+"Last-Translator: S.M. Rafiz <rafiz@codexin.com>\n"
+"Report-Msgid-Bugs-To: https://themeitems.com/contact-us/\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-KeywordsList: __;_e;_ex:1,2c;_n:1,2;_n_noop:1,2;_nx:1,2,4c;_nx_noop:1,2,3c;_x:1,2c;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: inc/classes/class-codexin-metaboxes.php:78
+msgid "Gallery"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:84
+msgid "Create Gallery"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:85
+msgid "Add images to create a slideshow"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:95
+msgid "Video"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:101
+msgid "Embed Video"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:105
+msgid "Insert Video Links from Youtube, Vimeo and "
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:107
+msgid "all Video supported sites by WordPress."
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:119
+msgid "Audio"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:125
+msgid "Embed Audio"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:129
+msgid "Insert Audio Links from Soundcloud, Spotify and "
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:131
+msgid "all Music supported sites by WordPress."
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:143
+msgid "Quote"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:149
+msgid "Quote Text"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:150
+msgid "Insert The Quote Text"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:157
+msgid "Name"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:158
+msgid "Author Name"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:165
+msgid "Source"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:166
+msgid "Source URL"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:177
+msgid "Link"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:183
+msgid "Link URL"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:184
+msgid "Insert Link URL"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:191
+msgid "Link Text"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:192
+msgid "Insert Link Text"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:199
+msgid "Open link in a new window?"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:200
+msgid "Select \"yes\" to open link in a new window"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:204
+msgid "Yes"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:205
+msgid "No"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:213
+msgid "Link Relation (Optional)"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:214
+msgid "Set the link \"rel\" attribute(ex: nofollow, dofollow, etc.)"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:234
+msgid "Page Title Settings"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:240
+msgid "Disable Page Title Area?"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:241
+msgid "Checking this will disable the Page Title Section"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:248
+msgid "Page Title Background Image"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:249
+msgid "Upload Page Header Background Image. The Image will be functional for all page templates except 'Page - Home Page'. This image will override the page title background image set from theme customizer "
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:255
+msgid "Page Title Alignment"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:256
+msgid "Please Select the Page title alignment to override. If you want default settings, choose 'Global Settings'"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:260, inc/classes/class-codexin-metaboxes.php:276
+msgid "Global Settings"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:261, inc/classes/class-codexin-metaboxes.php:277
+msgid "Left"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:262, inc/classes/class-codexin-metaboxes.php:278
+msgid "Center"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:263, inc/classes/class-codexin-metaboxes.php:279
+msgid "Right"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:271
+msgid "Breadcrumbs Alignment"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:272
+msgid "Please Select the Breadcrumbs alignment to override. If you want default settings, choose 'Global Settings'"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:291
+msgid "Page Slider Settings"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:297
+msgid "Select a Page Slider"
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:298
+msgid "Smart Slider is not Activated. Please Activate Smart Slider and try again."
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:298
+msgid "Select Slider Name to show on Page header, Please note that, Slider will be functional for 'Page - Home Page' template only  "
+msgstr ""
+
+#: inc/classes/class-codexin-metaboxes.php:302
+msgid "Select a Slider"
+msgstr ""
+
+#. translators: %s: post type plural name
+#: inc/classes/class-codexin-register-cpt.php:119
+msgctxt "post type general name"
+msgid "%s"
+msgstr ""
+
+#. translators: %s: post type singular name
+#: inc/classes/class-codexin-register-cpt.php:121
+msgctxt "post type singular name"
+msgid "%s"
+msgstr ""
+
+#. translators: %s: post type name
+#: inc/classes/class-codexin-register-cpt.php:123
+msgctxt "%s"
+msgid "Add New"
+msgstr ""
+
+#. translators: %s: post type name
+#. translators: %s: taxonomy name
+#: inc/classes/class-codexin-register-cpt.php:125, inc/classes/class-codexin-register-cpt.php:230
+msgid "Add New %s"
+msgstr ""
+
+#. translators: %s: post type name
+#. translators: %s: taxonomy name
+#: inc/classes/class-codexin-register-cpt.php:127, inc/classes/class-codexin-register-cpt.php:226
+msgid "Edit %s"
+msgstr ""
+
+#. translators: %s: post type name
+#: inc/classes/class-codexin-register-cpt.php:129
+msgid "New %s"
+msgstr ""
+
+#. translators: %s: post type plural name
+#. translators: %s: taxonomy plural name
+#: inc/classes/class-codexin-register-cpt.php:131, inc/classes/class-codexin-register-cpt.php:220
+msgid "All %s"
+msgstr ""
+
+#. translators: %s: post type name
+#: inc/classes/class-codexin-register-cpt.php:133
+msgid "View %s"
+msgstr ""
+
+#. translators: %s: post type plural name
+#. translators: %s: taxonomy plural name
+#: inc/classes/class-codexin-register-cpt.php:135, inc/classes/class-codexin-register-cpt.php:218
+msgid "Search %s"
+msgstr ""
+
+#. translators: %s: post type plural name
+#: inc/classes/class-codexin-register-cpt.php:137
+msgid "No %s found"
+msgstr ""
+
+#. translators: %s: post type plural name
+#: inc/classes/class-codexin-register-cpt.php:139
+msgid "No %s found in Trash"
+msgstr ""
+
+#. translators: %s: post type plural name
+#: inc/classes/class-codexin-register-cpt.php:141
+msgid "Parent %s: "
+msgstr ""
+
+#. translators: %s: taxonomy plural name
+#: inc/classes/class-codexin-register-cpt.php:214
+msgctxt "taxonomy general name"
+msgid "%s"
+msgstr ""
+
+#. translators: %s: taxonomy singular name
+#: inc/classes/class-codexin-register-cpt.php:216
+msgctxt "taxonomy singular name"
+msgid "%s"
+msgstr ""
+
+#. translators: %s: taxonomy name
+#: inc/classes/class-codexin-register-cpt.php:222
+msgid "Parent %s"
+msgstr ""
+
+#. translators: %s: taxonomy name
+#: inc/classes/class-codexin-register-cpt.php:224
+msgid "Parent %s:"
+msgstr ""
+
+#. translators: %s: taxonomy name
+#: inc/classes/class-codexin-register-cpt.php:228
+msgid "Update %s"
+msgstr ""
+
+#. translators: %s: taxonomy name
+#: inc/classes/class-codexin-register-cpt.php:232
+msgid "New %s Name"
+msgstr ""
+
+#. translators: %s: taxonomy modified name
+#: inc/classes/class-codexin-register-cpt.php:234
+msgid "%s"
+msgstr ""
+
+#. translators: %s: date and time of the revision
+#. translators: Publish box date format.
+#. translators: %s: URL of View Post & Name of the Custom Post Type
+#. translators: %s: URL of Preview Post & Name of the Custom Post Type
+#: inc/classes/class-codexin-register-cpt.php:295, inc/classes/class-codexin-register-cpt.php:298, inc/classes/class-codexin-register-cpt.php:300, inc/classes/class-codexin-register-cpt.php:301, inc/classes/class-codexin-register-cpt.php:302, inc/classes/class-codexin-register-cpt.php:303, inc/classes/class-codexin-register-cpt.php:306, inc/classes/class-codexin-register-cpt.php:309, inc/classes/class-codexin-register-cpt.php:316, inc/classes/class-codexin-register-cpt.php:323
+msgstr ""
+
+#: inc/classes/class-codexin-register-cpt.php:296
+msgid "Custom field updated."
+msgstr ""
+
+#: inc/classes/class-codexin-register-cpt.php:297
+msgid "Custom field deleted."
+msgstr ""
+
+#: inc/classes/class-codexin-register-cpt.php:307
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#. translators: post type name
+#: inc/classes/class-codexin-register-cpt.php:345
+msgid "Enter %s Title"
+msgstr ""
+
+#: inc/shortcodes/shortcodes.php:70
+msgid "Address:"
+msgstr ""
+
+#: inc/shortcodes/shortcodes.php:76
+msgid "Telephone:"
+msgstr ""
+
+#: inc/shortcodes/shortcodes.php:82
+msgid "Fax:"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:33
+msgid "Displays Your Latest Instagrams"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:35
+msgid "Codexin: Instagram Widget"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:59
+msgid "Widget Title:"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:64
+msgid "Ex: Instagram Feed"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:69
+msgid "Username:"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:74
+msgid "Insert User Name"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:79
+msgid "User ID:"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:84
+msgid "Insert User ID"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:88
+msgid "Lookup your User ID from "
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:90, inc/widgets/class-codexin-instagram-widget.php:107, inc/widgets/class-codexin-instagram-widget.php:124
+msgid "here"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:96
+msgid "Access Token:"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:101
+msgid "Insert Access Token"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:105
+msgid "Generate Your Access Token from "
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:113
+msgid "Client ID:"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:118
+msgid "Insert Client ID"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:122
+msgid "Register a new client from "
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:130
+msgid "Number of Photos to be Shown:"
+msgstr ""
+
+#. translators: instagram username
+#: inc/widgets/class-codexin-instagram-widget.php:266
+msgid "Follow %1$s @Instagram"
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:278
+msgid "Error: We were unable to fetch your instagram feed."
+msgstr ""
+
+#: inc/widgets/class-codexin-instagram-widget.php:302
+msgid "Error: Please Provide Valid Instagram User ID, Client ID and Access Token."
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:33
+msgid "Displays Most Popular Posts"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:35
+msgid "Codexin: Popular Posts"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:49, inc/widgets/class-codexin-recent-posts.php:49
+msgid "3"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:50, inc/widgets/class-codexin-recent-posts.php:50
+msgid "30"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:57, inc/widgets/class-codexin-recent-posts.php:58, inc/widgets/class-codexin-social-share.php:51
+msgid "Title:"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:58
+msgid "Ex: Popular Posts"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:62
+msgid "Number of Posts to Show: "
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:67, inc/widgets/class-codexin-recent-posts.php:68
+msgid "Title Length (In Characters): "
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:73, inc/widgets/class-codexin-recent-posts.php:74
+msgid "Display Post Featured Image?"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:77
+msgid "Choose The Posts Sorting Method:"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:81
+msgid "Sort By Views Count"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:82
+msgid "Sort By Comments Count"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:92, inc/widgets/class-codexin-recent-posts.php:93
+msgid "Select Post Meta to Display:"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:96, inc/widgets/class-codexin-recent-posts.php:97
+msgid "Display Post Date"
+msgstr ""
+
+#: inc/widgets/class-codexin-popular-posts.php:97, inc/widgets/class-codexin-recent-posts.php:98
+msgid "Display Comments Count"
+msgstr ""
+
+#: inc/widgets/class-codexin-recent-posts.php:33
+msgid "Displays Most Recent Posts"
+msgstr ""
+
+#: inc/widgets/class-codexin-recent-posts.php:35
+msgid "Codexin: Recent Posts"
+msgstr ""
+
+#: inc/widgets/class-codexin-recent-posts.php:59
+msgid "Ex: Recent Posts"
+msgstr ""
+
+#: inc/widgets/class-codexin-recent-posts.php:63
+msgid "Number of Posts to Show:"
+msgstr ""
+
+#: inc/widgets/class-codexin-recent-posts.php:78
+msgid "Choose The Order to Display Posts:"
+msgstr ""
+
+#: inc/widgets/class-codexin-recent-posts.php:82
+msgid "Descending"
+msgstr ""
+
+#: inc/widgets/class-codexin-recent-posts.php:83
+msgid "Ascending"
+msgstr ""
+
+#: inc/widgets/class-codexin-social-share.php:33
+msgid "Social Media Share for Posts or Pages"
+msgstr ""
+
+#: inc/widgets/class-codexin-social-share.php:35
+msgid "Codexin: Social Media Share"
+msgstr ""
+
+#: inc/widgets/class-codexin-social-share.php:52
+msgid "Ex: Share"
+msgstr ""

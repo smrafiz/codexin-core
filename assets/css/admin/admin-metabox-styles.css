@@ -1,0 +1,203 @@
+/************************************************************
+    Metabox Styles
+*************************************************************/
+
+.rwmb-meta-box .rwmb-label {
+    width: 30%;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.rwmb-meta-box .rwmb-label~.rwmb-input {
+    width: 70%;
+}
+
+.rwmb-meta-box .rwmb-field {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 15px;
+}
+
+.rwmb-meta-box .rwmb-field:last-child {
+    border-bottom: 0;
+}
+
+.rwmb-meta-box input[type=checkbox] {
+    border: 1px solid #0085ba;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.rwmb-meta-box input[type=checkbox]::before {
+    color: #0085ba;
+}
+
+.rwmb-meta-box .rwmb-time,
+.rwmb-meta-box .rwmb-email,
+.rwmb-meta-box .rwmb-date,
+.rwmb-meta-box .rwmb-oembed,
+.rwmb-meta-box .rwmb-url,
+.rwmb-meta-box .rwmb-file_input.rwmb-file_input,
+.rwmb-meta-box .rwmb-text {
+    border: 1px solid #c8c8c8;
+    height: 35px;
+    width: 400px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-width: 100%;
+}
+
+.rwmb-meta-box .rwmb-oembed:focus,
+.rwmb-meta-box .rwmb-textarea:focus,
+.rwmb-meta-box .rwmb-date:focus,
+.rwmb-meta-box .rwmb-time:focus,
+.rwmb-meta-box .rwmb-url:focus,
+.rwmb-meta-box .rwmb-select:focus,
+.rwmb-meta-box .rwmb-text:focus,
+.rwmb-meta-box input[type=checkbox]:focus {
+    border-color: #0085ba;
+    -webkit-box-shadow: 0 0 2px rgba(0, 133, 186, 0.8);
+    box-shadow: 0 0 2px rgba(0, 133, 186, 0.8);
+}
+
+.rwmb-meta-box .rwmb-textarea {
+    border: 1px solid #c8c8c8;
+    width: 400px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-width: 100%;
+    height: 150px;
+}
+
+
+.rwmb-meta-box .rwmb-select {
+    border: 1px solid #c8c8c8;
+    cursor: pointer;
+    height: 35px;
+    width: 400px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    max-width: 100%;
+}
+
+.rwmb-image-select {
+    width: 100%;
+    height: auto;
+    line-height: 0;
+    border-radius: 0;
+}
+
+.rwmb-image-select:hover,
+.rwmb-image-select.rwmb-active {
+    border-color: #0085ba;
+}
+
+.rwmb-meta-box .rwmb-background-wrapper .wp-picker-container button,
+.rwmb-meta-box .rwmb-background-wrapper .rwmb-file-input-select.button,
+.rwmb-meta-box .rwmb-background-wrapper .rwmb-file-input-remove.button,
+.rwmb-meta-box .rwmb-media-add a.button {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #f1f1f1;
+    text-align: center;
+    height: 32px;
+    line-height: 30px;
+    border-color: #ccc;
+    margin: 10px 0;
+}
+
+.rwmb-meta-box .rwmb-background-wrapper .rwmb-file-input-select.button,
+.rwmb-meta-box .rwmb-background-wrapper .rwmb-file-input-remove.button {
+    margin: 0;
+    height: 35px;
+    line-height: 32px;
+}
+
+.rwmb-meta-box .rwmb-background-wrapper .wp-picker-container .wp-color-result-text {
+    line-height: 30px;
+}
+
+.rwmb-meta-box .wp-picker-open+.wp-picker-input-wrap {
+    margin-top: 10px;
+}
+
+.rwmb-meta-box .wp-picker-container input[type=text].wp-color-picker {
+    line-height: 24px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-left: 5px;
+}
+
+.rwmb-meta-box .rwmb-background-wrapper .wp-picker-container .wp-picker-clear {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #f1f1f1;
+    text-align: center;
+    height: 32px;
+    line-height: 30px;
+    border-color: #ccc;
+}
+
+.rwmb-meta-box .rwmb-background-wrapper .wp-picker-container .wp-picker-clear:hover,
+.rwmb-meta-box .rwmb-background-wrapper .rwmb-file-input-select.button:hover,
+.rwmb-meta-box .rwmb-background-wrapper .rwmb-file-input-remove.button:hover,
+.rwmb-meta-box .rwmb-media-add a.button:hover {
+    background: #eee;
+    border-color: #999;
+}
+
+#ui-datepicker-div.ui-datepicker thead,
+#ui-datepicker-div.ui-datepicker .ui-datepicker-header,
+#ui-datepicker-div .ui-timepicker-div .ui-widget-header {
+    background: #464b50;
+}
+
+#ui-datepicker-div.ui-datepicker td .ui-state-active,
+#ui-datepicker-div.ui-datepicker td .ui-state-hover {
+    background: #0085ba;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#ui-datepicker-div .ui-slider-horizontal .ui-slider-handle:focus {
+    outline-color: #0085ba;
+}
+
+#codexin_page_background_meta_common,
+#codexin_page_slider_meta,
+#codexin-gallery-meta,
+#codexin-link-meta,
+#codexin-audio-meta,
+#codexin-video-meta,
+#codexin-quote-meta {
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#codexin_page_background_meta_common .toggle-indicator,
+#codexin_page_slider_meta .toggle-indicator,
+#codexin-gallery-meta .toggle-indicator,
+#codexin-link-meta .toggle-indicator,
+#codexin-audio-meta .toggle-indicator,
+#codexin-video-meta .toggle-indicator,
+#codexin-quote-meta .toggle-indicator {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+}
+
+.edit-post-layout__metaboxes #codexin_page_background_meta_common .hndle.ui-sortable-handle,
+.edit-post-layout__metaboxes #codexin_page_slider_meta .hndle.ui-sortable-handle,
+.edit-post-layout__metaboxes #codexin-gallery-meta .hndle.ui-sortable-handle,
+.edit-post-layout__metaboxes #codexin-link-meta .hndle.ui-sortable-handle,
+.edit-post-layout__metaboxes #codexin-audio-meta .hndle.ui-sortable-handle,
+.edit-post-layout__metaboxes #codexin-video-meta .hndle.ui-sortable-handle,
+.edit-post-layout__metaboxes #codexin-quote-meta .hndle.ui-sortable-handle {
+    background: #0085ba;
+    border-color: #0073aa #006799 #006799;
+    color: #fff;
+}
