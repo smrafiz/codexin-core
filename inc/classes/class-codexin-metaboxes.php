@@ -245,8 +245,8 @@ class Codexin_Metaboxes {
 				),
 
 				array(
-					'name'      => esc_html__( 'Page Title Background Image', 'codexin-core' ),
-					'desc'      => esc_html__( 'Upload Page Header Background Image. The Image will be functional for all page templates except \'Page - Home Page\'. This image will override the page title background image set from theme customizer ', 'codexin-core' ),
+					'name'      => esc_html__( 'Page Header Background Image', 'codexin-core' ),
+					'desc'      => esc_html__( 'Upload Page Header Background Image. The Image will be functional for all page templates except \'Page - Home Page\'. This image will override the page header background image set from theme customizer.', 'codexin-core' ),
 					'id'        => $this->prefix . 'page_background',
 					'type'      => 'background',
 				),
