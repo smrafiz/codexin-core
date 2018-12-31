@@ -180,7 +180,7 @@ class Codexin_Instagram_Widget extends WP_Widget {
 		$type        = esc_html( $args['type'] );
 		$value       = esc_html( $args['value'] );
 		$placeholder = esc_html( $args['placeholder'] );
-		$desc        = ! empty( $args['desc'] ) ? sprintf( '<span class="description">%1$s</span>', esc_html( $args['desc'] ) ) : '';
+		$desc        = ! empty( $args['desc'] ) ? sprintf( '<span class="description">%1$s</span>', $args['desc'] ) : '';
 
 		printf(
 			'<p><label for="%1$s">%2$s</label><input type="%3$s" class="widefat" name="%4$s" id="%1$s" value="%5$s" placeholder="%6$s" />%7$s</p>',
