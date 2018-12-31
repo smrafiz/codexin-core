@@ -32,7 +32,7 @@ class Codexin_Popular_Posts extends WP_Widget {
 			'classname' 	=> esc_attr( 'codexin-popular-posts-widget' ),
 			'description' 	=> esc_html__( 'Displays Most Popular Posts' , 'codexin-core' ),
 		);
-		parent::__construct( 'codexin_popular_posts', esc_html__( 'Codexin: Popular Posts', 'codexin-core' ), $widget_ops );
+		parent::__construct( 'codexin-popular-posts', esc_html__( 'Codexin: Popular Posts', 'codexin-core' ), $widget_ops );
 	}
 
 	/**

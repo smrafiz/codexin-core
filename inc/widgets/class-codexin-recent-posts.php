@@ -32,7 +32,7 @@ class Codexin_Recent_Posts extends WP_Widget {
 			'classname' 	=> esc_attr( 'codexin-recent-posts-widget' ),
 			'description' 	=> esc_html__( 'Displays Most Recent Posts', 'codexin-core' ),
 		);
-		parent::__construct( 'cx_recent_posts', esc_html__( 'Codexin: Recent Posts', 'codexin-core' ), $widget_ops );
+		parent::__construct( 'codexin-recent-posts', esc_html__( 'Codexin: Recent Posts', 'codexin-core' ), $widget_ops );
 	}
 
 	/**

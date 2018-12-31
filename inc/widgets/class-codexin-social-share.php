@@ -32,7 +32,7 @@ class Codexin_Social_Share extends WP_Widget {
 			'classname'     => esc_attr( 'codexin-social-share-widget' ),
 			'description'   => esc_html__( 'Social Media Share for Posts or Pages', 'codexin-core' ),
 		);
-		parent::__construct( 'codexin_social_share_widget', esc_html__( 'Codexin: Social Media Share', 'codexin-core' ), $widget_ops );
+		parent::__construct( 'codexin-social-share-widget', esc_html__( 'Codexin: Social Media Share', 'codexin-core' ), $widget_ops );
 	}
 
 	/**

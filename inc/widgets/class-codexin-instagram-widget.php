@@ -32,7 +32,7 @@ class Codexin_Instagram_Widget extends WP_Widget {
 			'classname'     => esc_attr( 'codexin-instagram-widget' ),
 			'description'   => esc_html__( 'Displays Your Latest Instagrams', 'codexin-core' ),
 		);
-		parent::__construct( 'codexin_instagram_widget', esc_html__( 'Codexin: Instagram Widget', 'codexin-core' ), $widget_ops );
+		parent::__construct( 'codexin-instagram-widget', esc_html__( 'Codexin: Instagram Widget', 'codexin-core' ), $widget_ops );
 
 	}
 
