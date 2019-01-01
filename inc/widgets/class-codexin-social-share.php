@@ -95,7 +95,8 @@ class Codexin_Social_Share extends WP_Widget {
 		}
 		?>
 
-			<div class="socials social-icons-round d-flex align-items-center justify-content-center justify-content-md-start">
+			<!-- <div class="socials social-icons-round d-flex align-items-center justify-content-center justify-content-md-start"> -->
+			<div class="socials social-icons-round">
 				<ul class="list-inline">
 					<li class="list-inline-item">
 						<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url( $share_url );?>" class="bg-facebook" title="Facebook" target="_blank"><i class="fa fa-facebook"></i></a>

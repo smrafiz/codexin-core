@@ -149,7 +149,8 @@ function cx_socials_shortcode( $atts ) {
 
 	?>
 
-		<div id="cx_socials" class="socials social-icons-round d-flex align-items-center justify-content-center justify-content-md-start">
+		<!-- <div id="cx_socials" class="socials social-icons-round d-flex align-items-center justify-content-center justify-content-md-start"> -->
+		<div id="cx_socials" class="socials social-icons-round">
 			<ul class="list-inline">
 
 				<?php
