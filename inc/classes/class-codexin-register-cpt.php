@@ -161,6 +161,7 @@ class Codexin_Register_CPT {
 				'rewrite'				=> true,
 				'capability-type'		=> 'post',
 				'hierarchical'			=> true,
+				'show_in_rest'			=> true,
 				'supports'				=> array(
 					'title',
 					'editor',
