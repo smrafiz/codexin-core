@@ -155,8 +155,8 @@ class Codexin_Loader extends Codexin_Base {
 		);
 
 		// Registering Custom taxonomies for 'Testimonial'.
-		$testimonial->cx_core_register_taxonomy( 'Testimonial Category' );
-		$testimonial->cx_core_register_taxonomy( 'Testimonial Tag' );
+		$testimonial->codexin_core_register_taxonomy( 'Testimonial Category' );
+		$testimonial->codexin_core_register_taxonomy( 'Testimonial Tag' );
 	}
 
 	/**

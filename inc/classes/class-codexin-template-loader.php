@@ -41,7 +41,7 @@ class Codexin_Template_Loader {
 		$this->cpt_types = $args;
 
 		// Including the template.
-		add_filter( 'template_include', array( $this, 'codexin_include_templates' ) );
+		add_filter( 'template_include', array( $this, 'codexin_core_include_templates' ) );
 	}
 
 	/**
@@ -51,11 +51,11 @@ class Codexin_Template_Loader {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function codexin_include_templates( $template ) {
+	public function codexin_core_include_templates( $template ) {
 
 		foreach ( $this->cpt_types as $cpt ) {
 			if ( get_post_type() === $cpt ) {
-				return $this->codexin_get_custom_template( $cpt );
+				return $this->codexin_core_get_custom_template( $cpt );
 			}
 		}
 
@@ -69,16 +69,16 @@ class Codexin_Template_Loader {
 	 * @access private
 	 * @since  1.0
 	 */
-	private function codexin_get_custom_template( $cpt ) {
+	private function codexin_core_get_custom_template( $cpt ) {
 
 		// Archive view template.
 		if ( is_post_type_archive( $cpt ) ) {
-			return $this->codexin_locate_template( $cpt, 'archive' );
+			return $this->codexin_core_locate_template( $cpt, 'archive' );
 		}
 
 		// Single view template.
 		if ( is_singular( $cpt ) ) {
-			return $this->codexin_locate_template( $cpt, 'single' );
+			return $this->codexin_core_locate_template( $cpt, 'single' );
 		}
 	}
 
@@ -90,7 +90,7 @@ class Codexin_Template_Loader {
 	 * @access private
 	 * @since  1.0
 	 */
-	private function codexin_locate_template( $cpt, $type ) {
+	private function codexin_core_locate_template( $cpt, $type ) {
 
 		$theme_files = array( $type . '-' . $cpt . '.php', 'templates/' . $type . '-' . $cpt . '.php' );
 		$exists_in_theme = locate_template( $theme_files, false );

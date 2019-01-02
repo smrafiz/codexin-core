@@ -57,30 +57,30 @@ class Codexin_Instagram_Widget extends WP_Widget {
 		$this->form_input(
 			array(
 				'label'       => esc_html__( 'Widget Title:', 'codexin-core' ),
-				'name'        => $this->get_field_name( 'title' ),
-				'id'          => $this->get_field_id( 'title' ),
+				'name'        => esc_attr( $this->get_field_name( 'title' ) ),
+				'id'          => esc_attr( $this->get_field_id( 'title' ) ),
 				'type'        => 'text',
-				'value'       => $title,
+				'value'       => esc_attr( $title ),
 				'placeholder' => esc_html__( 'Ex: Instagram Feed', 'codexin-core' ),
 			)
 		);
 		$this->form_input(
 			array(
 				'label'       => esc_html__( 'Username:', 'codexin-core' ),
-				'name'        => $this->get_field_name( 'username' ),
-				'id'          => $this->get_field_id( 'username' ),
+				'name'        => esc_attr( $this->get_field_name( 'username' ) ),
+				'id'          => esc_attr( $this->get_field_id( 'username' ) ),
 				'type'        => 'text',
-				'value'       => $username,
+				'value'       => esc_attr( $username ),
 				'placeholder' => esc_html__( 'Insert User Name', 'codexin-core' ),
 			)
 		);
 		$this->form_input(
 			array(
 				'label'       => esc_html__( 'User ID:', 'codexin-core' ),
-				'name'        => $this->get_field_name( 'user_id' ),
-				'id'          => $this->get_field_id( 'user_id' ),
+				'name'        => esc_attr( $this->get_field_name( 'user_id' ) ),
+				'id'          => esc_attr( $this->get_field_id( 'user_id' ) ),
 				'type'        => 'text',
-				'value'       => $user_id,
+				'value'       => esc_attr( $user_id ),
 				'placeholder' => esc_html__( 'Insert User ID', 'codexin-core' ),
 				'desc'        =>
 					sprintf(
@@ -94,10 +94,10 @@ class Codexin_Instagram_Widget extends WP_Widget {
 		$this->form_input(
 			array(
 				'label'       => esc_html__( 'Access Token:', 'codexin-core' ),
-				'name'        => $this->get_field_name( 'accss_token' ),
-				'id'          => $this->get_field_id( 'accss_token' ),
+				'name'        => esc_attr( $this->get_field_name( 'accss_token' ) ),
+				'id'          => esc_attr( $this->get_field_id( 'accss_token' ) ),
 				'type'        => 'text',
-				'value'       => $accss_token,
+				'value'       => esc_attr( $accss_token ),
 				'placeholder' => esc_html__( 'Insert Access Token', 'codexin-core' ),
 				'desc'        =>
 					sprintf(
@@ -111,10 +111,10 @@ class Codexin_Instagram_Widget extends WP_Widget {
 		$this->form_input(
 			array(
 				'label'       => esc_html__( 'Client ID:', 'codexin-core' ),
-				'name'        => $this->get_field_name( 'client_id' ),
-				'id'          => $this->get_field_id( 'client_id' ),
+				'name'        => esc_attr( $this->get_field_name( 'client_id' ) ),
+				'id'          => esc_attr( $this->get_field_id( 'client_id' ) ),
 				'type'        => 'text',
-				'value'       => $client_id,
+				'value'       => esc_attr( $client_id ),
 				'placeholder' => esc_html__( 'Insert Client ID', 'codexin-core' ),
 				'desc'        =>
 					sprintf(
@@ -128,10 +128,10 @@ class Codexin_Instagram_Widget extends WP_Widget {
 		$this->form_input(
 			array(
 				'label'       => esc_html__( 'Number of Photos to be Shown:', 'codexin-core' ),
-				'name'        => $this->get_field_name( 'count' ),
-				'id'          => $this->get_field_id( 'count' ),
+				'name'        => esc_attr( $this->get_field_name( 'count' ) ),
+				'id'          => esc_attr( $this->get_field_id( 'count' ) ),
 				'type'        => 'number',
-				'value'       => $count,
+				'value'       => esc_attr( $count ),
 				'placeholder' => absint( '9' ),
 			)
 		);
