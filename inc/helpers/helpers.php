@@ -22,8 +22,8 @@ if ( ! function_exists( 'codexin_get_post_views' ) ) {
 	 */
 	function codexin_get_post_views( $post_id ) {
 		$count_key = 'cx_post_views';
-		$count = get_post_meta( $post_id, $count_key, true );
-		if ( '' === $count ) {
+		$count = ( int ) get_post_meta( $post_id, $count_key, true );
+		if ( 0 === $count ) {
 			delete_post_meta( $post_id, $count_key );
 			add_post_meta( $post_id, $count_key, '0' );
 			return ' 0';
@@ -41,15 +41,15 @@ if ( ! function_exists( 'codexin_set_post_views' ) ) {
 	 */
 	function codexin_set_post_views( $post_id ) {
 		$count_key = 'cx_post_views';
-		$count = get_post_meta( $post_id, $count_key, true );
-		if ( '' === $count ) {
-			$count = 0;
+		$count = ( int ) get_post_meta( $post_id, $count_key, true );
+		if ( 0 === $count ) {
 			delete_post_meta( $post_id, $count_key );
 			add_post_meta( $post_id, $count_key, '0' );
-		} else {
-			$count++;
-			update_post_meta( $post_id, $count_key, $count );
-		}
+			return;
+		} 
+
+		$count++;
+		update_post_meta( $post_id, $count_key, $count );
 	}
 }
 // To keep the count accurate, lets get rid of prefetching.
@@ -67,6 +67,10 @@ if ( ! function_exists( 'codexin_retrieve_img_src' ) ) {
 	function codexin_retrieve_img_src( $image, $image_size ) {
 
 		$img_src     = wp_get_attachment_image_src( $image, $image_size );
+		if ( false === $img_src ) {
+			return '';
+		}
+
 		$img_source  = $img_src[0];
 		return $img_source;
 	}
