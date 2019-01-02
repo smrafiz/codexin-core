@@ -39,6 +39,8 @@ if ( ! function_exists( 'codexin_core_shortcodes' ) ) {
 /**
  * Shortcode Syntax:
  * [cx_contacts address="" phone="" phone_url="" fax="" email="" website=""]
+ *
+ * @param array $atts Arguments for the cx_contacts shortcode.
  */
 function cx_contacts_shortcode( $atts ) {
 	$atts = shortcode_atts(
@@ -105,6 +107,8 @@ function cx_contacts_shortcode( $atts ) {
 /**
  * Shortcode Syntax:
  * [cx_socials facebook="" twitter="" google_plus="" pinterest="" instagram="" linkedin="" dribbble="" flickr="" medium="" tumblr="" vimeo="" youtube="" reddit="" skype=""]
+ *
+ * @param array $atts Arguments for the cx_socials shortcode.
  */
 function cx_socials_shortcode( $atts ) {
 	$atts = shortcode_atts(
@@ -181,25 +185,22 @@ function cx_socials_shortcode( $atts ) {
 /**
  * Shortcode Syntax:
  * [cx_social_share]
+ *
+ * @param array $atts Arguments for the cx_social_share shortcode.
  */
 function cx_social_share_shortcode( $atts ) {
 	$atts = shortcode_atts(
 		array(),
 		$atts
 	);
-
 	$result = '';
 	ob_start();
-
-    global $post;
-
-    $url = get_permalink( $post->ID );
-
+	global $post;
+	$url = get_permalink( $post->ID );
 	?>
-
 		<div class="share socials share-links">
 			<ul class="list-inline">
-				<li class="list-inline-item caption"><?php esc_html_e( 'Share this post: ', 'powerpro' ); ?></li>
+				<li class="list-inline-item caption"><?php esc_html_e( 'Share this post: ', 'codexin-core' ); ?></li>
 				<li class="list-inline-item"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url( $url ); ?>" class="bg-facebook" data-toggle="tooltip" data-position="top" data-original-title="Facebook" target="_blank"><i class="fa fa-facebook"></i><span>Share</span></a></li>
 				<li class="list-inline-item"><a href="https://twitter.com/home?status=<?php echo esc_url( $url ); ?>" class="bg-twitter" data-toggle="tooltip" data-position="top" data-original-title="Twitter" target="_blank"><i class="fa fa-twitter"></i><span>Tweet</span></a></li>
 				<li class="list-inline-item"><a href="https://plus.google.com/share?url=<?php echo esc_url( $url ); ?>" class="bg-google-plus" data-toggle="tooltip" data-position="top" data-original-title="Google Plus" target="_blank"><i class="fa fa-google-plus"></i><span>Google+</span></a></li>

@@ -178,29 +178,29 @@ class Codexin_Popular_Posts extends WP_Widget {
 				$post_thumbnail = ( has_post_thumbnail() ) ? get_the_post_thumbnail_url( get_the_ID(), $thumbnail_size ) : '';
 
 				echo '<div class="posts-single media">';
-					if ( 'on' === $instance['show_thumb'] ) {
-						if ( ! empty( $post_thumbnail ) ) {
-							echo '<div class="post-thumbnail">';
-								echo '<a href="' . esc_url( get_the_permalink() ) . '"><img src="' . esc_url( $post_thumbnail ) . '" alt="' . esc_attr( $image_alt ) . '"/><div class="overlay"></div></a>';
-							echo '</div> <!-- end of posts-thumbnail -->';
-						}
+				if ( 'on' === $instance['show_thumb'] ) {
+					if ( ! empty( $post_thumbnail ) ) {
+						echo '<div class="post-thumbnail">';
+							echo '<a href="' . esc_url( get_the_permalink() ) . '"><img src="' . esc_url( $post_thumbnail ) . '" alt="' . esc_attr( $image_alt ) . '"/><div class="overlay"></div></a>';
+						echo '</div> <!-- end of posts-thumbnail -->';
 					}
-					echo '<div class="post-content media-body">';
-						echo '<h4><a href="' . esc_url( get_the_permalink() ) . '">';
-						if ( function_exists( 'codexin_char_limit' ) ) {
-							echo apply_filters( 'the_title', codexin_char_limit( $title_len, 'title' ) );
-						} else {
-							echo esc_html( wp_trim_words( get_the_title(), $title_len ) );
-						}
-						echo '</a></h4>';
-						if ( $display_meta === $display_meta_a ) {
-							echo '<p class="post-date">' . esc_html( date( get_option( 'date_format' ) ) ) . '</p>';
-						}
+				}
+				echo '<div class="post-content media-body">';
+				echo '<h4><a href="' . esc_url( get_the_permalink() ) . '">';
+				if ( function_exists( 'codexin_char_limit' ) ) {
+					echo apply_filters( 'the_title', codexin_char_limit( $title_len, 'title' ) );
+				} else {
+					echo esc_html( wp_trim_words( get_the_title(), $title_len ) );
+				}
+				echo '</a></h4>';
+				if ( $display_meta === $display_meta_a ) {
+					echo '<p class="post-date">' . esc_html( date( get_option( 'date_format' ) ) ) . '</p>';
+				}
 
-						if ( $display_meta === $display_meta_b ) {
-							echo '<p class="post-comments"><i class="fa fa-comments"></i> ' . absint( get_comments_number() ) . '</p>';
-						}
-					echo '</div> <!-- end of post-content -->';
+				if ( $display_meta === $display_meta_b ) {
+					echo '<p class="post-comments"><i class="fa fa-comments"></i> ' . absint( get_comments_number() ) . '</p>';
+				}
+				echo '</div> <!-- end of post-content -->';
 				echo '</div> <!-- end of posts-single -->';
 			} // End while().
 		} // End if().

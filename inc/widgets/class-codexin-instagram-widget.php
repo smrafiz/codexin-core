@@ -149,7 +149,7 @@ class Codexin_Instagram_Widget extends WP_Widget {
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		foreach ( array( 'title', 'username', 'user_id', 'accss_token', 'client_id', 'count' ) as $key => $value ) {
-			$instance[$value] = sanitize_text_field( $new_instance[$value] );
+			$instance[ $value ] = sanitize_text_field( $new_instance[ $value ] );
 		}
 
 		return $instance;

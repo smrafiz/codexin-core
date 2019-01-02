@@ -23,6 +23,7 @@ class Codexin_Loader extends Codexin_Base {
 	/**
 	 * Required files.
 	 *
+	 * @var array $files 	File list to load
 	 * @access private
 	 * @since  1.0
 	 */
@@ -34,6 +35,7 @@ class Codexin_Loader extends Codexin_Base {
 	/**
 	 * Widgets list
 	 *
+	 * @var array $widget_list	Widget list
 	 * @access private
 	 * @since  1.0
 	 */
@@ -50,7 +52,7 @@ class Codexin_Loader extends Codexin_Base {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function __construct(){
+	public function __construct() {
 		parent::__construct(
 			array(
 				plugin_dir_path( __FILE__ ) . 'inc/classes/',
@@ -71,10 +73,10 @@ class Codexin_Loader extends Codexin_Base {
 		define( 'CODEXIN_CORE_VERSION', '1.0' );
 
 		// System constants.
-		define( 'CODEXIN_CORE_ROOT_DIR', wp_normalize_path( trailingslashit( plugin_dir_path( __FILE__  ) ) ) );
+		define( 'CODEXIN_CORE_ROOT_DIR', wp_normalize_path( trailingslashit( plugin_dir_path( __FILE__ ) ) ) );
 		define( 'CODEXIN_CORE_INC_DIR', trailingslashit( CODEXIN_CORE_ROOT_DIR . 'inc' ) );
 		define( 'CODEXIN_CORE_WDGT_DIR', trailingslashit( CODEXIN_CORE_INC_DIR . 'widgets' ) );
-		define( 'CODEXIN_CORE_ROOT_URL', wp_normalize_path( plugin_dir_url( __FILE__  ) ) );
+		define( 'CODEXIN_CORE_ROOT_URL', wp_normalize_path( plugin_dir_url( __FILE__ ) ) );
 		define( 'CODEXIN_CORE_ASSET_URL', wp_normalize_path( trailingslashit( CODEXIN_CORE_ROOT_URL . 'assets' ) ) );
 		define( 'CODEXIN_CORE_JS_URL', trailingslashit( CODEXIN_CORE_ASSET_URL . 'js' ) );
 		define( 'CODEXIN_CORE_CSS_URL', trailingslashit( CODEXIN_CORE_ASSET_URL . 'css' ) );

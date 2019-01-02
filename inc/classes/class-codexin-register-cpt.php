@@ -291,7 +291,7 @@ class Codexin_Register_CPT {
 		$post_type_object = get_post_type_object( $post_type );
 		$post_type_name   = self::cx_beautify( $this->post_type_name );
 
-		$messages[$this->post_type_name] = array(
+		$messages[ $this->post_type_name ] = array(
 			0  => '',
 			1  => esc_html__( $post_type_name . ' updated.', 'codexin-core' ),
 			2  => esc_html__( 'Custom field updated.', 'codexin-core' ),
@@ -383,7 +383,7 @@ class Codexin_Register_CPT {
 	 * @since  1.0
 	 */
 	private static function cx_pluralize( $string ) {
-		$last = $string[strlen( $string ) - 1];
+		$last = $string[ strlen( $string ) - 1 ];
 
 		if ( 'y' === $last ) {
 			$cut = substr( $string, 0, -1 );

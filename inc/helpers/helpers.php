@@ -23,7 +23,7 @@ if ( ! function_exists( 'codexin_get_post_views' ) ) {
 	function codexin_get_post_views( $post_id ) {
 		$count_key = 'cx_post_views';
 		$count = get_post_meta( $post_id, $count_key, true );
-		if ( '' == $count ) {
+		if ( '' === $count ) {
 			delete_post_meta( $post_id, $count_key );
 			add_post_meta( $post_id, $count_key, '0' );
 			return ' 0';
@@ -42,7 +42,7 @@ if ( ! function_exists( 'codexin_set_post_views' ) ) {
 	function codexin_set_post_views( $post_id ) {
 		$count_key = 'cx_post_views';
 		$count = get_post_meta( $post_id, $count_key, true );
-		if ( '' == $count ) {
+		if ( '' === $count ) {
 			$count = 0;
 			delete_post_meta( $post_id, $count_key );
 			add_post_meta( $post_id, $count_key, '0' );

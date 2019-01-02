@@ -23,6 +23,7 @@ class Codexin_Base {
 	/**
 	 * Directory Paths.
 	 *
+	 * @var array $absolute_dirs	Absoute directory list
 	 * @access private
 	 * @since  1.0
 	 */
@@ -41,7 +42,7 @@ class Codexin_Base {
 		$this->absolute_dirs = $absolute_dirs;
 
 		// Register autoloader for plugin classes.
-		spl_autoload_register( array ( $this, 'autoload_class' ) );
+		spl_autoload_register( array( $this, 'autoload_class' ) );
 
 		// Fallback for autoload.
 		if ( ! class_exists( 'Codexin_Core' ) ) {
@@ -64,12 +65,12 @@ class Codexin_Base {
 		}
 
 		foreach ( $this->absolute_dirs as $key => $absolute_dir ) {
-			$file = $absolute_dir . strtolower( str_replace( '_', '-', "class-$class.php") );
+			$file = $absolute_dir . strtolower( str_replace( '_', '-', "class-$class.php" ) );
 			if ( file_exists( $file ) ) {
-			   include_once wp_normalize_path( $file );
-			   return true;
+				include_once wp_normalize_path( $file );
+				return true;
 			}
-		}		
+		}
 	}
 
 	/**
