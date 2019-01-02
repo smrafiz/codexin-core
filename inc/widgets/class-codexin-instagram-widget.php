@@ -331,7 +331,7 @@ class Codexin_Instagram_Widget extends WP_Widget {
 			);
 
 			// Check if the API is up.
-			if ( ! 200 == wp_remote_retrieve_response_code( $ig_ping ) ) {
+			if ( 200 !== (int) wp_remote_retrieve_response_code( $ig_ping ) ) {
 				return false;
 			}
 
