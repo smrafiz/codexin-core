@@ -23,11 +23,12 @@ class Codexin_Loader extends Codexin_Base {
 	/**
 	 * Required files.
 	 *
-	 * @var array $files 	File list to load
+	 * @var array $files File list to load
 	 * @access private
 	 * @since  1.0
 	 */
 	private $files = array(
+		'meta-box/meta-box',
 		'shortcodes/shortcodes',
 		'helpers/helpers',
 	);
@@ -35,7 +36,7 @@ class Codexin_Loader extends Codexin_Base {
 	/**
 	 * Widgets list
 	 *
-	 * @var array $widget_list	Widget list
+	 * @var array $widget_list Widget list
 	 * @access private
 	 * @since  1.0
 	 */
@@ -147,8 +148,8 @@ class Codexin_Loader extends Codexin_Base {
 		);
 
 		// Registering Custom taxonomies for 'Testimonial'.
-		$testimonial->codexin_core_register_taxonomy( 'Testimonial Category' );
-		$testimonial->codexin_core_register_taxonomy( 'Testimonial Tag' );
+		$testimonial->register_taxonomy( 'Testimonial Category' );
+		$testimonial->register_taxonomy( 'Testimonial Tag' );
 
 		// Loading required templates.
 		$init_template_loader = new Codexin_Template_Loader(
