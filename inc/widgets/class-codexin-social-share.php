@@ -95,7 +95,6 @@ class Codexin_Social_Share extends WP_Widget {
 		}
 		?>
 
-			<!-- <div class="socials social-icons-round d-flex align-items-center justify-content-center justify-content-md-start"> -->
 			<div class="socials social-icons-round">
 				<ul class="list-inline">
 					<li class="list-inline-item">

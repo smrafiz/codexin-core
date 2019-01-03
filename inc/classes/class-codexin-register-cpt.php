@@ -77,7 +77,7 @@ class Codexin_Register_CPT {
 	public function __construct( $name, $args = array(), $labels = array() ) {
 
 		// Set some important variables.
-		$this->post_type_name  	 = self::codexin_core_uglify( $name );
+		$this->post_type_name  	 = self::uglify( $name );
 		$this->post_type_args    = $args;
 		$this->post_type_labels  = $labels;
 
@@ -85,16 +85,16 @@ class Codexin_Register_CPT {
 		if ( ! post_type_exists( $this->post_type_name ) ) {
 
 			// Registering the Custom Post Type.
-			add_action( 'init', array( $this, 'codexin_core_register_post_type' ) );
+			add_action( 'init', array( $this, 'register_post_type' ) );
 
 			// Flush Rewrite Rules.
-			add_action( 'init', array( $this, 'codexin_core_flush_rewrite_rules' ) );
+			add_action( 'init', array( $this, 'flush_rewrite_rules' ) );
 
 			// Custom messages.
-			add_filter( 'post_updated_messages', array( $this, 'codexin_core_updated_messages' ) );
+			add_filter( 'post_updated_messages', array( $this, 'updated_messages' ) );
 
 			// Custom Title placeholders.
-			add_filter( 'enter_title_here', array( $this, 'codexin_core_title_placeholder' ), 0, 2 );
+			add_filter( 'enter_title_here', array( $this, 'title_placeholder' ), 0, 2 );
 		}
 	}
 
@@ -104,11 +104,11 @@ class Codexin_Register_CPT {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function codexin_core_register_post_type() {
+	public function register_post_type() {
 
 		// Capitilize the words and make it plural.
-		$name       = self::codexin_core_beautify( $this->post_type_name );
-		$plural     = self::codexin_core_pluralize( $name );
+		$name       = self::beautify( $this->post_type_name );
+		$plural     = self::pluralize( $name );
 
 		// Setting the default labels.
 		$labels = array_merge(
@@ -188,23 +188,23 @@ class Codexin_Register_CPT {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function codexin_core_register_taxonomy( $name, $args = array(), $labels = array() ) {
+	public function register_taxonomy( $name, $args = array(), $labels = array() ) {
 		if ( ! empty( $name ) ) {
 
 			// Name of the post type.
 			$post_type_name = $this->post_type_name;
 
 			// Taxonomy properties.
-			$taxonomy_name      	  = self::codexin_core_get_slug( $name );
+			$taxonomy_name      	  = self::get_slug( $name );
 			$this->taxonomy_labels    = $labels;
 			$this->taxonomy_args      = $args;
 
 			if ( ! taxonomy_exists( $taxonomy_name ) ) {
 
 				// Creating the taxonomy and attaching it to the object type (post type).
-				$name       = self::codexin_core_beautify( $name );
-				$plural     = self::codexin_core_pluralize( $name );
-				$cx_name 	= strpos( $taxonomy_name, 'tag' ) !== false ? self::codexin_core_pluralize( 'Tag' ) : self::codexin_core_pluralize( 'Category' );
+				$name       = self::beautify( $name );
+				$plural     = self::pluralize( $name );
+				$cx_name 	= strpos( $taxonomy_name, 'tag' ) !== false ? self::pluralize( 'Tag' ) : self::pluralize( 'Category' );
 
 				// Setting the default labels.
 				$labels = array_merge(
@@ -285,11 +285,11 @@ class Codexin_Register_CPT {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function codexin_core_updated_messages( $messages ) {
+	public function updated_messages( $messages ) {
 		$post             = get_post();
 		$post_type        = get_post_type( $post );
 		$post_type_object = get_post_type_object( $post_type );
-		$post_type_name   = self::codexin_core_beautify( $this->post_type_name );
+		$post_type_name   = self::beautify( $this->post_type_name );
 
 		$messages[ $this->post_type_name ] = array(
 			0  => '',
@@ -337,9 +337,9 @@ class Codexin_Register_CPT {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function codexin_core_title_placeholder( $title, $post ) {
+	public function title_placeholder( $title, $post ) {
 		$post_type_name = $this->post_type_name;
-		$name           = self::codexin_core_beautify( $post_type_name );
+		$name           = self::beautify( $post_type_name );
 
 		if ( $post_type_name === $post->post_type ) {
 			/* translators: post type name */
@@ -358,7 +358,7 @@ class Codexin_Register_CPT {
 	 * @access private
 	 * @since  1.0
 	 */
-	private static function codexin_core_beautify( $string ) {
+	private static function beautify( $string ) {
 		return ucwords( str_replace( '_', ' ', $string ) );
 	}
 
@@ -370,7 +370,7 @@ class Codexin_Register_CPT {
 	 * @access private
 	 * @since  1.0
 	 */
-	private static function codexin_core_uglify( $string ) {
+	private static function uglify( $string ) {
 		return strtolower( str_replace( ' ', '_', $string ) );
 	}
 
@@ -382,19 +382,24 @@ class Codexin_Register_CPT {
 	 * @access private
 	 * @since  1.0
 	 */
-	private static function codexin_core_pluralize( $string ) {
+	private static function pluralize( $string ) {
 		$last = $string[ strlen( $string ) - 1 ];
-
-		if ( 'y' === $last ) {
-			$cut = substr( $string, 0, -1 );
-			// convert y to ies.
-			$plural = $cut . 'ies';
-		} else {
-			// just attach an s.
-			$plural = $string . 's';
+		
+		switch ( $last ) {
+			case 'y':
+				if ( 'ey' === strtolower( substr( $string, -2 ) ) ) {
+					
+					return substr( $string, 0, -2 ) . 'ies';
+				}
+				return substr( $string, 0, -1 ) . 'ies';
+				break;
+			case 's':
+				return $string . 'es';
+				break;
+			default:
+				return $string . 's';
+				break;
 		}
-
-		return $plural;
 	}
 
 	/**
@@ -405,7 +410,7 @@ class Codexin_Register_CPT {
 	 * @access private
 	 * @since  1.0
 	 */
-	private static function codexin_core_get_slug( $name = null ) {
+	private static function get_slug( $name = null ) {
 		// If no name set use the post type name.
 		if ( ! isset( $name ) ) {
 			$name = $this->post_type_name;
@@ -426,7 +431,7 @@ class Codexin_Register_CPT {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function codexin_core_flush_rewrite_rules() {
+	public function flush_rewrite_rules() {
 		$has_been_flushed = get_option( $this->post_type_name . '_flush_rewrite_rules' );
 		// if we haven't flushed re-write rules, flush them (should be triggered only once).
 		if ( true !== $has_been_flushed ) {

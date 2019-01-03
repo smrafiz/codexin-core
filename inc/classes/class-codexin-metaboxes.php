@@ -44,7 +44,7 @@ class Codexin_Metaboxes {
 	 * @since  1.0
 	 */
 	public function __construct() {
-		add_filter( 'rwmb_meta_boxes', array( $this, 'codexin_core_register_metaboxes' ) );
+		add_filter( 'rwmb_meta_boxes', array( $this, 'register_metaboxes' ) );
 	}
 
 	/**
@@ -53,7 +53,7 @@ class Codexin_Metaboxes {
 	 * @access public
 	 * @since  1.0
 	 */
-	public function codexin_core_register_metaboxes() {
+	public function register_metaboxes() {
 
 		// 'Post' Metaboxes.
 		$this->post_metaboxes();

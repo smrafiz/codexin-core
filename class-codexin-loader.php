@@ -103,14 +103,6 @@ class Codexin_Loader extends Codexin_Base {
 		// Registering Metaboxes.
 		$init_codexin_metaboxes = new Codexin_Metaboxes();
 
-		// Loading required templates.
-		$init_template_loader = new Codexin_Template_Loader(
-			array(
-				'testimonial',
-				'client',
-			)
-		);
-
 		// Registering Custom Widgets.
 		add_action( 'widgets_init', array( $this, 'register_custom_widgets' ) );
 
@@ -157,6 +149,14 @@ class Codexin_Loader extends Codexin_Base {
 		// Registering Custom taxonomies for 'Testimonial'.
 		$testimonial->codexin_core_register_taxonomy( 'Testimonial Category' );
 		$testimonial->codexin_core_register_taxonomy( 'Testimonial Tag' );
+
+		// Loading required templates.
+		$init_template_loader = new Codexin_Template_Loader(
+			array(
+				'testimonial',
+				'client',
+			)
+		);
 	}
 
 	/**

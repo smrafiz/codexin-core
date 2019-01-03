@@ -12,15 +12,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit( 'This script cannot be accessed directly.' );
 }
 
-add_action( 'init', 'codexin_core_shortcodes' );
-if ( ! function_exists( 'codexin_core_shortcodes' ) ) {
+add_action( 'init', 'codexin_shortcodes' );
+if ( ! function_exists( 'codexin_shortcodes' ) ) {
 
 	/**
 	 * Registering shortcodes.
 	 *
 	 * @since  1.0
 	 */
-	function codexin_core_shortcodes() {
+	function codexin_shortcodes() {
 
 		// Shortcode names.
 		$shortcodes = array(
@@ -40,7 +40,7 @@ if ( ! function_exists( 'codexin_core_shortcodes' ) ) {
  * Shortcode Syntax:
  * [cx_contacts address="" phone="" phone_url="" fax="" email="" website=""]
  *
- * @param array $atts Arguments for the cx_contacts shortcode.
+ * @param array $atts Arguments for the shortcode.
  */
 function cx_contacts_shortcode( $atts ) {
 	$atts = shortcode_atts(
@@ -108,7 +108,7 @@ function cx_contacts_shortcode( $atts ) {
  * Shortcode Syntax:
  * [cx_socials facebook="" twitter="" google_plus="" pinterest="" instagram="" linkedin="" dribbble="" flickr="" medium="" tumblr="" vimeo="" youtube="" reddit="" skype=""]
  *
- * @param array $atts Arguments for the cx_socials shortcode.
+ * @param array $atts Arguments for the shortcode.
  */
 function cx_socials_shortcode( $atts ) {
 	$atts = shortcode_atts(
@@ -153,7 +153,6 @@ function cx_socials_shortcode( $atts ) {
 
 	?>
 
-		<!-- <div id="cx_socials" class="socials social-icons-round d-flex align-items-center justify-content-center justify-content-md-start"> -->
 		<div id="cx_socials" class="socials social-icons-round">
 			<ul class="list-inline">
 
@@ -186,7 +185,7 @@ function cx_socials_shortcode( $atts ) {
  * Shortcode Syntax:
  * [cx_social_share]
  *
- * @param array $atts Arguments for the cx_social_share shortcode.
+ * @param array $atts Arguments for the shortcode.
  */
 function cx_social_share_shortcode( $atts ) {
 	$atts = shortcode_atts(
