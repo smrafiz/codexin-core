@@ -62,6 +62,7 @@ class Codexin_Core {
 	public function enqueue_styles() {
 		wp_enqueue_style( 'swiper', CODEXIN_CORE_CSS_URL . 'swiper.min.css', false, '4.4.2','all' );
 		wp_enqueue_style( 'photoswipe', CODEXIN_CORE_CSS_URL . 'photoswipe.min.css', false, '4.1.2','all' );
+		wp_enqueue_style( 'photoswipe-default-skin', CODEXIN_CORE_CSS_URL . 'photoswipe-default-skin.min.css', false, '4.1.2','all' );
 	}
 
 	/**
@@ -72,7 +73,9 @@ class Codexin_Core {
 	 */
 	public function enqueue_script() {
 		wp_enqueue_script( 'swiper', CODEXIN_CORE_JS_URL . 'swiper.min.js', array( 'jquery' ), '4.4.2', true );
-		wp_enqueue_script( 'photoswipe', CODEXIN_CORE_JS_URL . 'photoswipe.js', array( 'jquery' ), '4.1.2', true );
+		wp_enqueue_script( 'photoswipe', CODEXIN_CORE_JS_URL . 'photoswipe.min.js', array( 'jquery' ), '4.1.2', true );
+		wp_enqueue_script( 'photoswipe-ui-default', CODEXIN_CORE_JS_URL . 'photoswipe-ui-default.min.js', array( 'jquery' ), '4.1.2', true );
+		wp_enqueue_script( 'photoswipe-trigger', CODEXIN_CORE_JS_URL . 'photoswipe-trigger.js', array( 'jquery' ), '4.1.2', true );
 	}
 
 	/**

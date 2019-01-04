@@ -231,7 +231,7 @@ class Codexin_Metaboxes {
 		// Page Background, Title and breadcrumb Metabox.
 		$this->meta_boxes[] = array(
 			'id'            => 'codexin_page_background_meta_common',
-			'title'         => esc_html__( 'Page Title Settings', 'codexin-core' ),
+			'title'         => esc_html__( 'Page Header Settings', 'codexin-core' ),
 			'post_types'    => array( 'page' ),
 			'context'       => 'normal',
 			'priority'      => 'high',
@@ -245,7 +245,7 @@ class Codexin_Metaboxes {
 				),
 
 				array(
-					'name'      => esc_html__( 'Page Header Background Image', 'codexin-core' ),
+					'name'      => esc_html__( 'Page Header Background Settings', 'codexin-core' ),
 					'desc'      => esc_html__( 'Upload Page Header Background Image. The Image will be functional for all page templates except \'Page - Home Page\'. This image will override the page header background image set from theme customizer.', 'codexin-core' ),
 					'id'        => $this->prefix . 'page_background',
 					'type'      => 'background',

@@ -28,10 +28,18 @@ class Codexin_Loader extends Codexin_Base {
 	 * @since  1.0
 	 */
 	private $files = array(
-		'meta-box/meta-box',
 		'shortcodes/shortcodes',
 		'helpers/helpers',
 	);
+
+	/**
+	 * Metabox init.
+	 *
+	 * @var string $metabox Metabox init file
+	 * @access private
+	 * @since  1.0
+	 */
+	private $metabox = 'meta-box/meta-box';
 
 	/**
 	 * Widgets list
@@ -101,6 +109,9 @@ class Codexin_Loader extends Codexin_Base {
 		// Registering Custom Post Types.
 		$this->init_custom_post_types();
 
+		// Metabox initialization
+		$this->load_metabox();
+
 		// Registering Metaboxes.
 		$init_codexin_metaboxes = new Codexin_Metaboxes();
 
@@ -158,6 +169,32 @@ class Codexin_Loader extends Codexin_Base {
 				'client',
 			)
 		);
+	}
+
+	/**
+	 * Loading and initializing of Metabox
+	 *
+	 * @access public
+	 * @since  1.0
+	 */
+	private function load_metabox() {
+
+		// Get Installed plugin.
+		$installed_plugins = get_plugins();
+
+		// Get Active plugins.
+		$active_plugins = (array) get_option( 'active_plugins', array() );
+
+		$metabox_init = $this->metabox;
+
+		$plugin = "$metabox_init.php";
+
+		// Conditionally load metabox.
+		if ( array_key_exists( $plugin, $installed_plugins )
+			&& ! in_array( $plugin, $active_plugins )
+			|| ! array_key_exists( $plugin, $installed_plugins ) ) {
+			parent::require_file( CODEXIN_CORE_INC_DIR . "$metabox_init.php" );
+		}
 	}
 
 	/**
