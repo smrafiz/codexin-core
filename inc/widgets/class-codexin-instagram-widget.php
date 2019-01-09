@@ -245,7 +245,7 @@ class Codexin_Instagram_Widget extends WP_Widget {
 						'codexin_ig_image_html',
 						sprintf(
 							'<figure>
-								<a href="%1$s" data-size="640x640">
+								<a href="%1$s" data-size="640x640" class="img">
 									<img src="%2$s" alt="Instagram Image" />
 								</a>
 								<figcaption class="visually-hidden">%3$s</figcaption>
